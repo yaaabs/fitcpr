@@ -105,14 +105,13 @@
         <section class="content ">
           <div class="container">
             <?php 
-              if(!file_exists($page.".php") && !is_dir($page)){
+              if(!file_exists($page.".php") && !file_exists($page."/index.php")){
                   include '404.html';
               }else{
                 if(is_dir($page))
                   include $page.'/index.php';
                 else
                   include $page.'.php';
-
               }
             ?>
           </div>
