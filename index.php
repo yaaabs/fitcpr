@@ -1,28 +1,32 @@
 <?php require_once('./config.php'); ?>
  <!DOCTYPE html>
 <html lang="en" class="" style="height: auto;">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Added responsive meta tag -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Roboto+Slab:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <style>
   
   #header .site-title {
-    font-family: 'Montserrat', sans-serif; /* Use the desired font */
-    font-weight: 700; /* Adjust font weight */
-    font-size: 3rem; /* Adjust size as needed */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
     color: #FDB813;
     text-align: center;
 }
 
   #header{
     height:70vh;
-    width:calc(100%);
+    width:100%;
     position:relative;
     top:-1em;
   }
   #header:before{
     content:"";
     position:absolute;
-    height:calc(100%);
-    width:calc(100%);
+    height:100%;
+    width:100%;
     background-image:url(<?= validate_image($_settings->info("cover")) ?>);
     background-size:cover;
     background-repeat:no-repeat;
@@ -30,8 +34,8 @@
   }
   #header>div{
     position:absolute;
-    height:calc(100%);
-    width:calc(100%);
+    height:100%;
+    width:100%;
     z-index:2;
   }
 
@@ -58,6 +62,63 @@
 #enrollment:hover {
     background-color: #007a00; /* Darker green on hover */
     color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 991.98px) {
+    #header {
+        height: 60vh;
+    }
+    
+    #header h1 {
+        font-size: 3.5rem !important;
+    }
+    
+    #enrollment {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #header {
+        height: 50vh;
+    }
+    
+    #header h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    #enrollment {
+        width: 70% !important;
+    }
+    
+    .welcome-content p {
+        padding: 0 10px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #header {
+        height: 40vh;
+    }
+    
+    #header h1 {
+        font-size: 2rem !important;
+    }
+    
+    #enrollment {
+        width: 80% !important;
+        font-size: 1rem !important;
+    }
+    
+    .col-lg-8.mx-auto.py-5 {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+    
+    h1.text-center {
+        font-size: 1.8rem !important;
+    }
 }
 
 </style>
@@ -87,7 +148,7 @@
     width: 100%; 
     margin: 0 auto; 
     line-height: 1.2;">
-    FEU Institute of Technology: <br>Capstone Project Repository
+    FEU Institute of Technology: <br class="d-md-block d-none">Capstone Project Repository
 </h1>
 
 <br>
@@ -128,13 +189,13 @@
                     <hr>
                     <div class="welcome-content">
                         <div class="welcome-section text-center py-3">
-                            <p style="text-align: justify; margin: 0px 0px 15px; padding: 0px;">
+                            <p style="text-align: justify; margin: 0px 0px 15px; padding: 0px 15px;">
                               Welcome to the <b>Far Eastern University - Institute of Technology</b>, a hub of creativity, innovation, and excellence. This platform is a testament to the dedication and ingenuity of our community, where academic achievements and groundbreaking ideas come to life.
                               </p>
-                              <p style="text-align: justify; margin: 0px 0px 15px; padding: 0px;">
+                              <p style="text-align: justify; margin: 0px 0px 15px; padding: 0px 15px;">
                                   Explore a diverse collection of projects and initiatives that showcase the technical expertise, research capabilities, and problem-solving skills of our students and faculty. Each endeavor reflects our unwavering commitment to academic excellence and real-world impact.
                               </p>
-                              <p style="text-align: justify; margin: 0px 0px 15px; padding: 0px;">
+                              <p style="text-align: justify; margin: 0px 0px 15px; padding: 0px 15px;">
                                   Together, we celebrate a culture of <b>Innovation and Excellence</b> that drives us to shape the future through knowledge, passion, and collaboration. Join us in discovering ideas that inspire and solutions that transform.
                               </p>
                         </div>
